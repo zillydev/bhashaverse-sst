@@ -10,15 +10,15 @@ class WebViewScreen extends StatefulWidget {
 }
 
 class _WebViewScreenState extends State<WebViewScreen> {
- 
   String content = Get.arguments ?? "";
   late final WebViewController _webViewController;
 
   @override
   void initState() {
+    // WebViewPlatform.instance = WebWebViewPlatform();
     _webViewController = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
+      // ..setBackgroundColor(const Color(0x00000000))
       ..loadHtmlString(content);
 
     super.initState();
@@ -26,9 +26,12 @@ class _WebViewScreenState extends State<WebViewScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return WebViewWidget(controller: _webViewController);
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      appBar: AppBar(
+        title: const Text("Webview"),
+      ),
+      body: WebViewWidget(controller: _webViewController),
+    );
   }
-
- 
-
 }
