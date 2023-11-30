@@ -49,6 +49,7 @@ dependencies:
   google_fonts: ^4.0.4
   avatar_glow: ^2.0.2
   http: ^1.1.0
+  html: ^0.15.4
   lottie: ^2.1.0
   webview_flutter: ^4.4.2
   share_plus: ^6.3.0
@@ -63,6 +64,7 @@ dependencies:
   sound_stream:
      git:
       url: https://github.com/JHM69/flutter-sound-stream.git
+  uno: ^1.1.9
 
 dev_dependencies:
   flutter_test:
